@@ -2,7 +2,8 @@ package com.example.timerproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import java.util.*
+import kotlinx.android.synthetic.main.activity_main.*
+import java.util.concurrent.TimeUnit
 
 
 class MainActivity : AppCompatActivity() {
@@ -11,12 +12,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-    val timer = Timer (300000/ 1000)
-        start.setOnClickListener {timer.start ()}
-        stop.setOnClickListener {timer.stop ()}
+        val time: Long = TimeUnit.MINUTES.toMillis(5)
+        val period: Long = 1000
+
+
+        buttonStart.setOnClickListener {
+
+        }
 
     }
 
-    class Timer(millisInFuture: Long, countDownInterval: Long) : Timer(millisInFuture, countDownInterval)
+//    private fun timer
 
 }
