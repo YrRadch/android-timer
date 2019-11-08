@@ -17,11 +17,14 @@ class MainActivity : AppCompatActivity() {
 
 
         buttonStart.setOnClickListener {
-
+            timer.run
         }
 
     }
 
-//    private fun timer
+}
+
+private fun timer() {
+}
 
 }
